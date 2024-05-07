@@ -1,4 +1,5 @@
 ﻿using PepDog.Core;
+using PepDogURI.Local;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,8 @@ namespace PepDogURI.Forms {
         private void LoadingForm_Load(object sender, EventArgs e) {
 
             if(Client.HasJava8()) {
-                
+                Functions.SetupURIValues(this);
+                MessageBox.Show(Variables.command + " " + Variables.id);
             } else {
                 MessageBox.Show("Java 8 was not found!", "PepDog Launcher Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();

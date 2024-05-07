@@ -27,8 +27,16 @@ namespace PepDogURI.Local {
 
         }
 
-        public static void SetupURIValues() {
-            string ExtractedArg = Variables.SharedArgs.Replace("pepdog://", "").Replace("pepdog", "").Replace(":", "").Replace("/", "").Replace("?", "");
+        public static void SetupURIValues(Form form) {
+            string[] holder = Variables.SharedArgs.Replace("pepdog://", "").Split('/');
+            Variables.command = holder[0];
+            try {
+                Variables.id = int.Parse(holder[1]);
+            } catch(FormatException e) {
+                MessageBox.Show("Failed to process URL as ID was not a number!", "PepDog - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                form.Close();
+            }
+            
         }
     }
 }
