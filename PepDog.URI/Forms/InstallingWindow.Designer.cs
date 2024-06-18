@@ -1,7 +1,7 @@
 ﻿
 namespace LambdaBlox.Installer
 {
-    partial class InstallerWindow
+    partial class InstallingWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -29,26 +29,17 @@ namespace LambdaBlox.Installer
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstallerWindow));
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstallingWindow));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.InstallButton = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.ProgressText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome to the LambdaBlox (2008M) Installer!\r\nClick \"Install\" to continue!";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
-            this.pictureBox1.Image = global::LambdaBlox.Installer.Properties.Resources.favicon;
+            this.pictureBox1.Image = global::LambdaBlox.Launcher.Properties.Resources.favicon;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(89, 89);
@@ -56,38 +47,44 @@ namespace LambdaBlox.Installer
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // InstallButton
+            // progressBar1
             // 
-            this.InstallButton.Location = new System.Drawing.Point(296, 82);
-            this.InstallButton.Name = "InstallButton";
-            this.InstallButton.Size = new System.Drawing.Size(70, 23);
-            this.InstallButton.TabIndex = 2;
-            this.InstallButton.Text = "Install...";
-            this.InstallButton.UseVisualStyleBackColor = true;
-            this.InstallButton.Click += new System.EventHandler(this.InstallButton_Click);
+            this.progressBar1.Location = new System.Drawing.Point(107, 62);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(259, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar1.TabIndex = 2;
             // 
-            // InstallerWindow
+            // ProgressText
+            // 
+            this.ProgressText.Location = new System.Drawing.Point(107, 27);
+            this.ProgressText.Name = "ProgressText";
+            this.ProgressText.Size = new System.Drawing.Size(259, 23);
+            this.ProgressText.TabIndex = 3;
+            this.ProgressText.Text = "Installing...";
+            this.ProgressText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // InstallingWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(378, 117);
-            this.Controls.Add(this.InstallButton);
+            this.Controls.Add(this.ProgressText);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "InstallerWindow";
-            this.Text = "PepDog Installer";
-            this.Load += new System.EventHandler(this.InstallerWindow_Load);
+            this.Name = "InstallingWindow";
+            this.Text = "LambdaBlox (2008M) Installer";
+            this.Load += new System.EventHandler(this.Window_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button InstallButton;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label ProgressText;
     }
 }
 

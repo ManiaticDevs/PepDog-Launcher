@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PepDog Launcher")]
-[assembly: AssemblyDescription("URI registration utility for PepDog")]
+[assembly: AssemblyTitle("LambdaBlox Launcher")]
+[assembly: AssemblyDescription("URI registration and installation utility for LambdaBlox")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Oikmo")]
-[assembly: AssemblyProduct("PepDog")]
+[assembly: AssemblyProduct("LambdaBlox")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -1,5 +1,5 @@
 ﻿
-namespace PepDog.Installer
+namespace LambdaBlox.Installer
 {
     partial class InstallingWindow
     {
@@ -39,7 +39,7 @@ namespace PepDog.Installer
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
-            this.pictureBox1.Image = global::PepDog.Installer.Properties.Resources.logo;
+            this.pictureBox1.Image = global::LambdaBlox.Installer.Properties.Resources.favicon;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(89, 89);
@@ -60,7 +60,7 @@ namespace PepDog.Installer
             this.ProgressText.Name = "ProgressText";
             this.ProgressText.Size = new System.Drawing.Size(259, 23);
             this.ProgressText.TabIndex = 3;
-            this.ProgressText.Text = "label1";
+            this.ProgressText.Text = "Installing...";
             this.ProgressText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // InstallingWindow
@@ -73,8 +73,8 @@ namespace PepDog.Installer
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InstallingWindow";
-            this.Text = "PepDog Installer";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "LambdaBlox (2008M) Installer";
+            this.Load += new System.EventHandler(this.Window_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

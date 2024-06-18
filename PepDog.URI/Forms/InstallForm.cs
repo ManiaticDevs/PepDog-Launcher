@@ -1,4 +1,5 @@
-﻿using PepDogURI.Local;
+﻿using LambdaBlox.Installer;
+using LambdaBloxURI.Local;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PepDogURI.Forms {
+namespace LambdaBloxURI.Forms {
     public partial class InstallForm : Form {
         public InstallForm() {
             InitializeComponent();
@@ -21,7 +22,9 @@ namespace PepDogURI.Forms {
 
         private void InstallButton_Click(object sender, EventArgs e) {
             Functions.RegisterURI(this);
-            Close();
+            Hide();
+            new InstallingWindow().Show();
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

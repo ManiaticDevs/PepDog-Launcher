@@ -1,4 +1,4 @@
-﻿namespace PepDogURI.Forms {
+﻿namespace LambdaBloxURI.Forms {
     partial class LoadingForm {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::LambdaBlox.Launcher.Properties.Resources.favicon;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 11);
             this.pictureBox1.Name = "pictureBox1";

@@ -3,7 +3,7 @@ using System;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace PepDog.Core {
+namespace LambdaBlox.Core {
     public class Client {
         public static bool HasJava8() {
             string regexPattern = @"([0-9]+)";

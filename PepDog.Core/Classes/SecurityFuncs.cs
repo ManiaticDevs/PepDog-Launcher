@@ -14,7 +14,7 @@ using System.Net;
 using System.Threading.Tasks;
 #endregion
 
-namespace PepDog.Core {
+namespace LambdaBlox.Core {
     #region Security Functions
     public static class SecurityFuncs {
         [DllImport("user32.dll")]

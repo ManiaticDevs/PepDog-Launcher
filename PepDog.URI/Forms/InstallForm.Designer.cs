@@ -1,4 +1,4 @@
-﻿namespace PepDogURI.Forms {
+﻿namespace LambdaBloxURI.Forms {
     partial class InstallForm {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::LambdaBlox.Launcher.Properties.Resources.favicon;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -64,7 +64,7 @@
             this.MinimizeBox = false;
             this.Name = "InstallForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PepDog URI Installer";
+            this.Text = "LambdaBlox (2008M) URI Installer";
             this.Load += new System.EventHandler(this.InstallForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{834830BC-717F-4900-B5F6-9DE46BAB835F}</ProjectGuid>
+    <ProjectGuid>{5EE03174-910A-4CF4-A460-7FC3F1016FB2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PepDog.Installer</RootNamespace>
-    <AssemblyName>PepDog.Installer</AssemblyName>
+    <RootNamespace>LambdaBlox.Launcher</RootNamespace>
+    <AssemblyName>LambdaBlox.Launcher</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,11 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,25 +50,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Local\Functions.cs" />
+    <Compile Include="Classes\Local\Variables.cs" />
+    <Compile Include="Classes\URIRegister.cs" />
+    <Compile Include="Forms\InstallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InstallForm.Designer.cs">
+      <DependentUpon>InstallForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InstallingWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\InstallingWindow.Designer.cs">
       <DependentUpon>InstallingWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InstallerWindow.cs">
+    <Compile Include="Forms\LoadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\InstallerWindow.Designer.cs">
-      <DependentUpon>InstallerWindow.cs</DependentUpon>
+    <Compile Include="Forms\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="LambdaBloxURI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\InstallForm.resx">
+      <DependentUpon>InstallForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\InstallingWindow.resx">
       <DependentUpon>InstallingWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InstallerWindow.resx">
-      <DependentUpon>InstallerWindow.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,7 +92,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,7 +106,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="iconx32.ico" />
+    <None Include="Resources\favicon.png" />
   </ItemGroup>
+  <Import Project="..\PepDog.Core\PepDog.Core.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

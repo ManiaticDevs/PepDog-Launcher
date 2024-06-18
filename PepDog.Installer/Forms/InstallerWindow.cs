@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PepDog.Installer {
+namespace LambdaBlox.Installer {
     public partial class InstallerWindow : Form {
         public InstallerWindow() {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace PepDog.Installer {
                 Process.Start(processInfo);
                 return true;
             } catch (Win32Exception) {
-                // Do nothing. Probably the user canceled the UAC window
+                // Do nothing. User probably canceled the UAC window
             }
             return false;
         }

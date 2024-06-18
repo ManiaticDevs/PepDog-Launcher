@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace PepDogURI
+namespace LambdaBloxURI
 {
     public class URIRegister
     {

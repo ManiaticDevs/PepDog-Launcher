@@ -1,5 +1,5 @@
-﻿using PepDogURI.Forms;
-using PepDogURI.Local;
+﻿using LambdaBloxURI.Forms;
+using LambdaBloxURI.Local;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PepDogURI
+namespace LambdaBloxURI
 {
     internal sealed class PepDogURI
     {

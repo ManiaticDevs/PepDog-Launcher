@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.34729.46
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PepDog.Core", "PepDog.Core\PepDog.Core.shproj", "{8C5F7F41-7511-40F2-B0AB-652C3B1D09F9}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LambdaBlox.Core", "PepDog.Core\LambdaBlox.Core.shproj", "{8C5F7F41-7511-40F2-B0AB-652C3B1D09F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PepDog.URI", "PepDog.URI\PepDog.URI.csproj", "{5EE03174-910A-4CF4-A460-7FC3F1016FB2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PepDog.Installer", "PepDog.Installer\PepDog.Installer.csproj", "{834830BC-717F-4900-B5F6-9DE46BAB835F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaBlox.URI", "PepDog.URI\LambdaBlox.URI.csproj", "{5EE03174-910A-4CF4-A460-7FC3F1016FB2}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -23,10 +21,6 @@ Global
 		{5EE03174-910A-4CF4-A460-7FC3F1016FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EE03174-910A-4CF4-A460-7FC3F1016FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EE03174-910A-4CF4-A460-7FC3F1016FB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{834830BC-717F-4900-B5F6-9DE46BAB835F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{834830BC-717F-4900-B5F6-9DE46BAB835F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{834830BC-717F-4900-B5F6-9DE46BAB835F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{834830BC-717F-4900-B5F6-9DE46BAB835F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
