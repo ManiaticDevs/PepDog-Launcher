@@ -1,11 +1,7 @@
 ﻿using LambdaBlox.Core;
-using LambdaBloxURI;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace LambdaBloxURI.Local {
@@ -15,8 +11,12 @@ namespace LambdaBloxURI.Local {
                 try {
                     URIRegister uri = new URIRegister("lambdablox", "url.lambdablox");
                     uri.Register();
-
-                    //MessageBox.Show("URI successfully installed and registered!", "LambdaBlox - Install URI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if(Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), ".lambdablox"))) {
+                        Directory.Delete(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), ".lambdablox"), true);
+                    }
+                    
+                    MessageBox.Show("URI successfully installed and registered!", "LambdaBlox - Install URI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    System.Windows.Forms.Application.Exit();
                 } catch (Exception ex) {
                     MessageBox.Show("Failed to register. (Error: " + ex.Message + ")", "LambdaBlox - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     form.Close();
@@ -54,12 +54,10 @@ namespace LambdaBloxURI.Local {
             string color_raw = split[3].Split(new string[] { "colors:" }, StringSplitOptions.None)[1].Replace(":",",");
             Variables.colors = color_raw;
 
-            string client = "L2008";
-
             var process = new Process {
                 StartInfo = {
-                    FileName = System.IO.Path.Combine(System.IO.Path.Combine(System.IO.Path.Combine(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), ".lambdablox"), "client"), client),"LambdaBloxApp.exe"),
-                    Arguments = "-script \"dofile('rbxasset://scripts/StartPlayer.lua') start('"+Variables.ip+"',"+Variables.port+",'"+Variables.name+"',"+Variables.colors+")\""
+                    FileName = Path.Combine(System.IO.Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName),"LambdaBloxApp.exe"),
+                    Arguments = "-script \"dofile('http://afs.gurdit.com/download/connect.lua') start('"+Variables.ip+"',"+Variables.port+",'"+Variables.name+"',"+Variables.colors+")\""
                 }
             };
             process.Start();

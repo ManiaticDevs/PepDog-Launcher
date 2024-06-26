@@ -1,13 +1,5 @@
-﻿using LambdaBlox.Installer;
-using LambdaBloxURI.Local;
+﻿using LambdaBloxURI.Local;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LambdaBloxURI.Forms {
@@ -22,9 +14,6 @@ namespace LambdaBloxURI.Forms {
 
         private void InstallButton_Click(object sender, EventArgs e) {
             Functions.RegisterURI(this);
-            Hide();
-            new InstallingWindow().Show();
-            System.Windows.Forms.Application.Exit();
         }
     }
 }
